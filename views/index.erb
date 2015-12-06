@@ -1,11 +1,20 @@
-<%= bootstrap_alert "<strong>Warning! Warning!</strong> It looks like it's <strong>#{current_date_and_time}</strong>!", 'warning' %>
+<h2>Click on the switch to toggle it on or off.</h2>
+<% params['switch_status'] ||= 'off' %>
+<form>
+  <input type="hidden" name="switch_status" value="<%= toggle_switch params['switch_status'] %>">
+  <button type="submit" class="btn btn-<%=
+    case params['switch_status']
+    when 'off'    then 'default'
+    when 'on'     then 'success'
+    when 'broken' then 'danger'
+    end
+  %>">
+    <%= params['switch_status'].upcase %>
+  </button>
+</form>
 
-<section class="jumbotron text-center">
-  <p>You know what time that is?</p>
-  <h1>It's... CAT GIF TIME!</h1>
+<h2>Can you read this encrypted text?</h2>
+<p><%= secret_code "You are reading an encoded message." %></p>
 
-  <figure>
-    <%= image_tag @cat_image.url, 'CAT GIF!' %>
-    <figcaption>Source: <a href="<%= @cat_image.source_url %>"><%= @cat_image.source_url %></a></figcaption>
-  </figure>
-</section>
+<h2>Here's a dummy paragraph automatically filled out by our ipsum generator.</h2>
+<p><%= something_ipsum 500 %></p>

@@ -1,28 +1,10 @@
 module MethodsPracticeHelpers
 
-  def image_tag(source, alternate_text)
-    # Generate an image tag with the given source and the classes
-    # "img-responsive" and "img-thumbnail". The image should also have an alt
-    # attribute with the contents of alternate_text.
-  end
-
-  def bootstrap_alert(message, type='info')
-    # Generates the HTML for a Bootstrap alert (useful since it can be diffcult
-    # to remember all HTML needed to do it right). It should show the message in
-    # the "message" variable and should have a class appropriate for the "type"
-    # that is passed in, defaulting to 'info' if no type is passed in.
-  end
-
-  def current_date_and_time
-    # Give the current date and time, in the format: "February 6, 2015 at 4:25pm"
-    # Time.now.strftime is a great method chain you can use for this purpose.
-    # See how to use it at: http://apidock.com/ruby/Time/strftime
-  end
-
   # ---------------------------------------------------------------------
-  # ANYTHING BEYOND THIS POINT DOES NOT HAVE ANY SPECS WRITTEN, SO SHOULD
-  # ONLY BE COMPLETED AFTER A DEEPER DIVE INTO WRITING SPECS WITH RSPEC.
-  # THEY BECOME PROGRESSIVELY MORE DIFFICULT THE FURTHER DOWN YOU GO.
+  # NONE OF THESE METHODS HAVE ANY SPECS WRITTEN, SO SHOULD ONLY BE
+  # COMPLETED AFTER FILLING OUT A CORRESPONDING SPEC FILE IN
+  # `spec/helpers/methods_practice_helpers/`. THEY BECOME PROGRESSIVELY
+  # MORE DIFFICULT THE FURTHER DOWN YOU GO, SO START WITH THE FIRST ONE.
   # ---------------------------------------------------------------------
 
   def toggle_switch(state)
@@ -55,6 +37,7 @@ module MethodsPracticeHelpers
     # these features of Ruby helpful:
     #
     #  - http://ruby-doc.org/core-2.2.0/String.html#method-i-size
+    #  - http://ruby-doc.org/core-2.2.0/Array.html#method-i-sample
     #  - https://www.codecademy.com/courses/ruby-beginner-en-XYcN1/0/1
   end
 
