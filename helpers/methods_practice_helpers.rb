@@ -34,6 +34,10 @@ module MethodsPracticeHelpers
     #   3. Change any uppercase letters to lowercase and any lowercase letters
     #      to uppercase.
     #      http://ruby-doc.org/core-2.2.0/String.html#method-i-swapcase
+    return "#{text}".
+      reverse.
+      gsub(/[aeiou ]/, 'a' => 4, 'e' => 3, 'i' => 1, 'o' => 0, 'u' => '|_|', ' ' => '#').
+      swapcase
   end
 
   def something_ipsum(minimum_characters)
