@@ -8,3 +8,27 @@
 # 4. Tested 100 times, `something_ipsum(250)` never returns a string with more than 350 characters
 # 5. Tested up to 5 times, `something_ipsum(10)` doesn't always return the same string
 # 6. Tested up to 5 times, `something_ipsum(250)` doesn't always return the same string
+
+require_relative '../../../helpers/methods_practice_helpers'
+
+describe MethodsPracticeHelpers do
+  include MethodsPracticeHelpersSpecHelpers
+  include MethodsPracticeHelpers
+
+  describe '#lansing_ipsum' do
+
+    context 'when tested 100 times with a minimum character count of 10' do
+
+      it 'always returns a string with at least 10 characters' do
+        expect("lansing_ipsum(minimum_characters)".size).to be > 10
+      end
+
+      it 'never returns a string with more than 110 characters' do        
+        expect("lansing_ipsum(minimum_characters)".size).to be <= 110
+      end
+
+    end
+
+  end
+
+end

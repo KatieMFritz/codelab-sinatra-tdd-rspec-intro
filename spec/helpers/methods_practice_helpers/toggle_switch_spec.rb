@@ -14,17 +14,17 @@ describe MethodsPracticeHelpers do
 
   describe '#toggle_switch', :pending do
 
-    it 'returns OFF when state is ON' do |state|
+    it 'returns OFF when state is ON' do
       state = 'on'
       expect(toggle_switch(state)).to eq('off')
     end
 
-    it 'returns ON when state is OFF' do |state|
+    it 'returns ON when state is OFF' do
       state = 'off'
       expect(toggle_switch(state)).to eq('on')
     end
 
-    it 'returns BROKEN when state is NEITHER OFF NOR ON' do |state|
+    it 'returns BROKEN when state is NEITHER OFF NOR ON' do
       state = random_string(4,10)
       expect(toggle_switch(state)).to eq('broken')
     end

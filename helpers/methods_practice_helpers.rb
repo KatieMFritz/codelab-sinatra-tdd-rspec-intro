@@ -40,7 +40,7 @@ module MethodsPracticeHelpers
       swapcase
   end
 
-  def something_ipsum(minimum_characters)
+  def lansing_ipsum(minimum_characters)
     # You may have heard of Cat Ipsum or Hipster Ipsum. Make up a new one.
     # Replace "something" with the kind of ipsum you want to create, then
     # generate text for the minimum number of characters you want. Once you
