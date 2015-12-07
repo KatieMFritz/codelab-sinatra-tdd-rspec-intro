@@ -24,7 +24,7 @@ describe MethodsPracticeHelpers do
       expect(toggle_switch(state)).to eq('on')
     end
 
-    it 'returns BROKEN when state is NOT SET' do |state|
+    it 'returns BROKEN when state is NEITHER OFF NOR ON' do |state|
       state = random_string(4,10)
       expect(toggle_switch(state)).to eq('broken')
     end
