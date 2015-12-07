@@ -11,6 +11,13 @@ module MethodsPracticeHelpers
     # `state` will contain a string with either the text "on" or "off". If
     # it's "on", we should return "off". If it's "off", we should return "on".
     # If it's neither "on" nor "off", we should return "broken".
+    if state == "on"
+      return "off"
+    elsif state == "off"
+      return "on"
+    else
+      return "broken"
+    end
   end
 
   def secret_code(text)

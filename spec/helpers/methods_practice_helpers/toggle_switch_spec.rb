@@ -9,31 +9,24 @@
 require_relative '../../../helpers/methods_practice_helpers'
 
 describe MethodsPracticeHelpers do
+  include MethodsPracticeHelpersSpecHelpers
   include MethodsPracticeHelpers
-
-  STATES_TO_TEST = ['off', 'on', 'random_string(4,10))']
 
   describe '#toggle_switch' do
 
-    STATES_TO_TEST.each do |state|
-      context "when the state is #{state}" do
-        before(:each) do
-          if state == "off"
-            @expected_message = "on"
-          elsif state == "on"
-            @expected_message = "off"
-          else
-            @expected_message = "broken"
-          end
-          @actual_message = toggle_switch(state)
-        end
+    it 'returns OFF when state is ON' do |state|
+      state = 'on'
+      expect(toggle_switch(state)).to eq('off')
+    end
 
-        it "returns \"#{@expected_message}\"" do
-          expect(@actual_message).to eq(@expected_message)
-        end
+    it 'returns ON when state is OFF' do |state|
+      state = 'off'
+      expect(toggle_switch(state)).to eq('on')
+    end
 
-      end
-
+    it 'returns BROKEN when state is NOT SET' do |state|
+      state = random_string(4,10)
+      expect(toggle_switch(state)).to eq('broken')
     end
 
   end
