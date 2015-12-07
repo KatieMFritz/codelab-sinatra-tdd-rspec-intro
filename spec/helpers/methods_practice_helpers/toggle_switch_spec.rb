@@ -12,7 +12,7 @@ describe MethodsPracticeHelpers do
   include MethodsPracticeHelpersSpecHelpers
   include MethodsPracticeHelpers
 
-  describe '#toggle_switch', :pending do
+  describe '#toggle_switch' do
 
     it 'returns OFF when state is ON' do
       state = 'on'

@@ -20,11 +20,17 @@ describe MethodsPracticeHelpers do
     context 'when tested 100 times with a minimum character count of 10' do
 
       it 'always returns a string with at least 10 characters' do
-        expect("lansing_ipsum(minimum_characters)".size).to be > 10
+        100.times do
+          minimum_characters = 10
+          puts lansing_ipsum(minimum_characters)
+          expect(lansing_ipsum(minimum_characters).size).to be > 10
+          test = 'something'
+        end
       end
 
-      it 'never returns a string with more than 110 characters' do        
-        expect("lansing_ipsum(minimum_characters)".size).to be <= 110
+      it 'never returns a string with more than 110 characters' do
+        minimum_characters = 10
+        expect("#{lansing_ipsum(minimum_characters)}".size).to be <= 110
       end
 
     end

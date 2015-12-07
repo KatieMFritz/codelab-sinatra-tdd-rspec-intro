@@ -11,7 +11,7 @@ describe MethodsPracticeHelpers do
   include MethodsPracticeHelpersSpecHelpers
   include MethodsPracticeHelpers
 
-  describe '#secret_code', :pending do
+  describe '#secret_code' do
 
     it 'correctly encodes "The quick brown fox jumps over the lazy dog."' do
       text = 'The quick brown fox jumps over the lazy dog.'
